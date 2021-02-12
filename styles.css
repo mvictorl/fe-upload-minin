@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  background: #666;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  padding-top: 5rem;
+  width: 800px;
+  margin: 0 auto;
+}
+
+.card {
+  border-radius: 6px;
+  background: #fff;
+  padding: 1rem;
+  box-shadow: 2px 3px 10px rgba(0,0,0,.3);
+}
+
+.btn {
+  color: #42b983;
+  position: relative;
+  border-radius: 99px;
+  border: 1px solid #42b983;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: .5rem 1.5rem;
+  font-weight: 700;
+  outline: none;
+  background: #fff;
+  transition: all .22s;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.btn.primary {
+  background: #42b983;
+  color: #fff;
+}
+
+.btn:active {
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, .3);
+}
+
+.btn:hover {
+  cursor: pointer;
+  opacity: .8;
+}
+
+.preview {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  padding: .5rem;
+}
+
+.preview-item {
+  position: relative;
+  display: flex;
+  width: 180px;
+  height: 101px;
+  background: #eee;
+  overflow: hidden;
+}
+
+
+.preview-item.removing {
+  transform: scale(0);
+  transition: transform 0.3s;
+}
+
+.preview-item img {
+  max-width: 180px;
+  max-height: 101px;
+  margin: auto;
+}
+
+.preview-remove {
+  opacity: 0;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: red;
+  border: 1px solid rgba(0, 0, 0, .4);
+  border-radius: 2px;
+  font-weight: bold;
+  background: rgba(255, 255, 255, .4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity .22s;
+}
+
+.preview-item:hover .preview-remove {
+  opacity: 1;
+}
+
+.preview-info {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: -30px;
+  height: 25px;
+  font-size: .8rem;
+  background: rgba(255, 255, 255, .4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+  transition: bottom .22s;
+}
+
+.preview-item:hover .preview-info {
+  bottom: 0;
+}
+
+.preview-info-progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  opacity: .6;
+  background: #42b983;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width .22s;
+  color: #fff;
+  text-shadow: #000 1px 1px;
+}
